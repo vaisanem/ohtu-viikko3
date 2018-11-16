@@ -1,0 +1,5 @@
+/Kurssistatistiikka/.nb-gradle/
+/ohtu-viikko3/.nb-gradle/
+*/build/
+*/.gradle/
+.vscode
