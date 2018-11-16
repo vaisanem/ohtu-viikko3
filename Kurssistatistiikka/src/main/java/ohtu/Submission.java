@@ -7,20 +7,12 @@ public class Submission implements Comparable {
     private int exercisesMax;
     private String course;
 
-    public void setWeek(int week) {
-        this.week = week;
-    }
-
     public int getWeek() {
         return week;
     }    
 
     public double getHours() {
         return hours;
-    }
-
-    public void setHours(double hours) {
-        this.hours = hours;
     }
 
     public int[] getExercises() {
@@ -33,16 +25,12 @@ public class Submission implements Comparable {
     
     public String exercisesToString() {
         String string = "";
-        for (int i=0; i<getExercises().length-1; i++) string += getExercises()[i] + ", ";
-        return string + getExercises()[getExercises().length-1];
+        for (int i=0; i<exercises.length-1; i++) string += exercises[i] + ", ";
+        return string + exercises[exercises.length-1];
     }
 
     public String getCourse() {
         return course;
-    }
-
-    public void setCourse(String course) {
-        this.course = course;
     }
     
     @Override

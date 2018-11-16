@@ -18,8 +18,8 @@ public class Main {
         String url = "https://studies.cs.helsinki.fi/courses/students/"+studentNr+"/submissions";
         String courseUrl = "https://studies.cs.helsinki.fi/courses/courseinfo";
 
-        String bodyText = Request.Get(url).execute().returnContent().asString();
-        String bodyText2 = Request.Get(courseUrl).execute().returnContent().asString();
+        String bodyText = request(url);
+        String bodyText2 = request(courseUrl);
 
         //System.out.println("json-muotoinen data:");
         //System.out.println( bodyText );
@@ -49,6 +49,7 @@ public class Main {
             if (!sub.getCourse().equals(subs[i-1].getCourse())) {
                 System.out.println("yhteensä: " + exercises + "/" + course.getExercisesSum() 
                         + " tehtävää, " + hours + " tuntia");
+                System.out.println(course.stats());
                 course = courses.get(sub.getCourse());
                 exercises = hours = 0;
                 System.out.println("\n" + course);
@@ -60,6 +61,11 @@ public class Main {
             exercises += sub.getExercises().length;
         }
         System.out.println("yhteensä: " + exercises + "/" + course.getExercisesSum() 
-                + " tehtävää, " + hours + " tuntia\n");
+                + " tehtävää, " + hours + " tuntia");
+        System.out.println(course.stats() + "\n");
+    }
+    
+    public static String request(String url) throws IOException {
+        return Request.Get(url).execute().returnContent().asString();
     }
 }
