@@ -26,4 +26,15 @@ public class Course {
     public int getYear() {
         return year;
     }
+    
+    public int getExercisesSum() {
+        int s=0;
+        for (int i : exercises) s+=i;
+        return s;
+    }
+    
+    @Override
+    public String toString() {
+        return fullName + " " + term + " " + year;
+    }
 }

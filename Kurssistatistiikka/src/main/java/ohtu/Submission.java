@@ -1,9 +1,10 @@
 package ohtu;
 
-public class Submission {
+public class Submission implements Comparable {
     private int week;
     private double hours;
     private int[] exercises;
+    private int exercisesMax;
     private String course;
 
     public void setWeek(int week) {
@@ -26,8 +27,8 @@ public class Submission {
         return exercises;
     }
 
-    public void setExercises(int[] exercises) {
-        this.exercises = exercises;
+    public void setExerciseMax(int exercisesMax) {
+        this.exercisesMax = exercisesMax;
     }
     
     public String exercisesToString() {
@@ -46,8 +47,17 @@ public class Submission {
     
     @Override
     public String toString() {
-        return getCourse() + " viikko" + getWeek() + ": tehtyjä tehtäviä yhteensä " + getExercises().length
-                + ", aikaa kului " + getHours() + " tuntia, tehdyt tehtävät: " + exercisesToString();
+        return "viikko" + week + ": tehtyjä tehtäviä yhteensä " + exercises.length + "/" + exercisesMax
+                + ", aikaa kului " + hours + " tuntia, tehdyt tehtävät: " + exercisesToString();
     }
+
+    @Override
+    public int compareTo(Object o) {
+        Submission s = (Submission) o;
+        if (course.compareTo(s.getCourse())==0) return week - s.getWeek();
+        return s.getCourse().compareTo(course);
+    }
+    
+    
     
 }
