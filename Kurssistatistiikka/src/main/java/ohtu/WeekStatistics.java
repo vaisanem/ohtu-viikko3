@@ -1,6 +1,6 @@
 package ohtu;
 
-public class WeekStatistic {
+public class WeekStatistics {
     private int students;
     private int hour_total;
     private int exercise_total;

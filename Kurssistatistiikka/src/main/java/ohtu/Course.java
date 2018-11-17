@@ -45,7 +45,7 @@ public class Course {
         double hours_total = 0;
         int exercises_total = 0;
         for (String key : parsittuData.keySet()) {
-            WeekStatistic stat = mapper.fromJson(parsittuData.get(key), WeekStatistic.class);
+            WeekStatistics stat = mapper.fromJson(parsittuData.get(key), WeekStatistics.class);
             students += stat.getStudents();
             hours_total += stat.getHour_total();
             exercises_total += stat.getExercise_total();
