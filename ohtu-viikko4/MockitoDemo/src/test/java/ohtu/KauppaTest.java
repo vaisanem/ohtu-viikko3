@@ -20,7 +20,7 @@ public class KauppaTest {
         kauppa.aloitaOstokset();
         kauppa.lisaaOstos(5);
         kauppa.lisaaOstos(5);
-        //kauppa.maksa("1111");
+        kauppa.maksa("1111");
 
         // varmistetaan pankilta että sen metodia maksa on kutsuttu
         verify(mockPankki).maksa(anyString(), anyInt(), anyInt());
