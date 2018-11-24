@@ -1,11 +1,11 @@
-package ohtu.matkakortti;
+package ohtu.maksukortti;
 
 // ÄLÄ MUUTA TÄMÄN LUOKAN KOODIA
-public class Matkakortti {
+public class Maksukortti {
 
     private int saldo;
 
-    public Matkakortti(int saldo) {
+    public Maksukortti(int saldo) {
         this.saldo = saldo;
     }
 

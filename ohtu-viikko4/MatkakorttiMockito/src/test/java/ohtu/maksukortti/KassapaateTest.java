@@ -1,8 +1,8 @@
 
-package ohtu.matkakortti;
+package ohtu.maksukortti;
 
-import ohtu.matkakortti.Matkakortti;
-import ohtu.matkakortti.Kassapaate;
+import ohtu.maksukortti.Maksukortti;
+import ohtu.maksukortti.Kassapaate;
 import org.junit.Before;
 import org.junit.Test;
 import static org.mockito.Matchers.anyInt;
@@ -15,12 +15,12 @@ import static org.mockito.Mockito.when;
 public class KassapaateTest {
     
     Kassapaate kassa;
-    Matkakortti kortti;
+    Maksukortti kortti;
     
     @Before
     public void setUp() {
         kassa = new Kassapaate();
-        kortti = mock(Matkakortti.class);
+        kortti = mock(Maksukortti.class);
     }
     
     @Test

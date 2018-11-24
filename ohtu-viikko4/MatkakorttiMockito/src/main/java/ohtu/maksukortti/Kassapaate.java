@@ -1,4 +1,4 @@
-package ohtu.matkakortti;
+package ohtu.maksukortti;
 
 public class Kassapaate {
     private int myytyjaLounaita;
@@ -8,11 +8,11 @@ public class Kassapaate {
         this.myytyjaLounaita = 0;
     }
     
-    public void lataa(Matkakortti kortti, int summa){
+    public void lataa(Maksukortti kortti, int summa){
         kortti.lataa(summa);
     }
     
-    public void ostaLounas(Matkakortti kortti) {
+    public void ostaLounas(Maksukortti kortti) {
         kortti.osta(HINTA);
         myytyjaLounaita++;
     }
