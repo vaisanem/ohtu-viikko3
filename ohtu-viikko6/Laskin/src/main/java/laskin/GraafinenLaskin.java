@@ -17,17 +17,16 @@ public class GraafinenLaskin extends Pane {
         tuloskentta.setEditable(false);
         TextField syotekentta = new TextField(""); 
         
-        HBox napit = new HBox(10);
+        HBox napit = new HBox(10); 
         Button plus = new Button("+");
         Button miinus = new Button("-");
         Button nollaa = new Button("Z");
-        nollaa.disableProperty().set(true);
         Button undo = new Button("undo"); 
-        undo.disableProperty().set(true);
         
         napit.getChildren().addAll(plus, miinus, nollaa, undo);
-                 
-        Tapahtumankuuntelija kasittelija = new Tapahtumankuuntelija(tuloskentta, syotekentta, plus, miinus, nollaa, undo);
+        
+        Operaatiokirjasto operaatiot = new Operaatiokirjasto(tuloskentta, syotekentta, plus, miinus, nollaa, undo);
+        Tapahtumankuuntelija kasittelija = new Tapahtumankuuntelija(operaatiot);
         plus.setOnAction(kasittelija);
         miinus.setOnAction(kasittelija);
         nollaa.setOnAction(kasittelija);
