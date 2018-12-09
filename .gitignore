@@ -2,6 +2,7 @@
 /ohtu-viikko3/.nb-gradle/
 build/
 .gradle/
+bin/
 .vscode
 /HelloCucumber/.nb-gradle/
 /LoginCucumber/.nb-gradle/
