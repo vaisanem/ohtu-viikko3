@@ -1,7 +1,7 @@
 package ohtu.kivipaperisakset;
 
 // Tuomari pitää kirjaa ensimmäisen ja toisen pelaajan pisteistä sekä tasapelien määrästä.
-public class Tuomari {
+public class Tuomari implements Toimitsija {
 
     private int ekanPisteet;
     private int tokanPisteet;
